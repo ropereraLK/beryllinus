@@ -2,7 +2,7 @@
   <img src="./assets/beryllinus-logo.png" alt="Beryllinus Logo" width="160"/>
 </p>
 
-<h1 align="center">🦜 Beryllinus</h1>
+<h1 align="center">Beryllinus</h1>
 
 <p align="center">
   AI-driven leisure software inspired by Sri Lanka
