@@ -1,3 +1,23 @@
+<p align="center">
+  <img src="./assets/beryllinus-logo.png" alt="Beryllinus Logo" width="160"/>
+</p>
+
+<h1 align="center">🦜 Beryllinus</h1>
+
+<p align="center">
+  AI-driven leisure software inspired by Sri Lanka
+</p>
+
+---
+
+**Beryllinus** is a modern, AI-driven leisure software platform inspired by the **Sri Lankan Hanging Parrot (*Loriculus beryllinus*)**, a species known for its agility, intelligence, and adaptability. The name and visual identity reflect these qualities, aligning nature-inspired design with modern technology to create a smart and responsive digital platform.
+
+Beryllinus is built for hotels, villas, resorts, and leisure-focused accommodations, delivering a clean and intuitive digital experience. This repository contains the **frontend application**, developed with **React and Next.js**, optimized for performance, scalability, and modern cloud deployments.
+
+At its core, Beryllinus is **AI-powered**. The platform is designed to integrate GPT-based decision support and intelligent automation, enabling smarter operational insights, contextual recommendations, and data-driven decision-making across hospitality workflows.
+
+Designed with cloud-native principles, Beryllinus scales seamlessly from small properties to enterprise-level deployments, combining modern UX, AI intelligence, and scalable architecture into a single leisure software ecosystem.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
