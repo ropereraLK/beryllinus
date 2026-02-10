@@ -5,7 +5,7 @@
 <h1 align="center">Beryllinus</h1>
 
 <p align="center">
-  AI-driven leisure software inspired by Sri Lanka
+  AI-driven leisure software
 </p>
 
 ---
