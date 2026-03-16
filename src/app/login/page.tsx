@@ -1,5 +1,4 @@
 "use client";
-
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "../../state/hooks";
@@ -13,8 +12,11 @@ import {
   selectAuthLoading,
   selectIsAuthenticated,
 } from "../../state/auth/selectors";
+import { loginUser } from "@/state/auth/thunks";
 
-export default function LoginPage() {
+
+export default function LoginPage(){
+
   const dispatch = useAppDispatch();
   const isLoading = useAppSelector(selectAuthLoading);
   const error = useAppSelector(selectAuthError);
@@ -24,34 +26,22 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e: FormEvent) => {
+  //TODO: async
+  const handleSubmit = async (e:FormEvent)=>{
     e.preventDefault();
 
     dispatch(loginStart());
 
-    try {
-      // TODO: replace this mock with a real API call
-      // Example:
-      // const user = await authApi.login({ email, password });
-      await new Promise((resolve) => setTimeout(resolve, 500));
+    //Api Call to login
+    dispatch(
+      loginUser({
+        email,
+        password,
+      })
+    );
 
-      dispatch(
-        loginSuccess({
-          id: "mock-id",
-          name: "Mock User",
-          email,
-        }),
-      );
 
-      router.push("/");
-    } catch (err: any) {
-      dispatch(
-        loginFailure(
-          err?.message || "Failed to login. Please try again.",
-        ),
-      );
-    }
-  };
+  }
 
   if (isAuthenticated) {
     // If already logged in, redirect away from login
@@ -62,12 +52,16 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
-        <h1 className="mb-6 text-center text-2xl font-semibold text-gray-900">
-          Sign in
-        </h1>
 
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div>
+      {/* Title: Sign in */}
+      <h1 className="mb-6 text-center text-2xl font-semibold text-gray-900">
+        Sign in
+      </h1>
+
+      {/* Form: Email and Password */}
+
+      <form className="space-y-4" onSubmit={handleSubmit}>
+      <div>
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
@@ -116,9 +110,12 @@ export default function LoginPage() {
           >
             {isLoading ? "Signing in..." : "Sign in"}
           </button>
-        </form>
+
+      </form>
+      
+
+
       </div>
     </div>
   );
 }
-
