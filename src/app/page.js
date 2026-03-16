@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Index from "@/app/component/global";
+import Index from "./component/global";
 
 export default function Home() {
   return (
