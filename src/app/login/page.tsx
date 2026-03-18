@@ -15,7 +15,7 @@ import {
 import { loginUser } from "@/state/auth/thunks";
 
 
-export default function LoginPage(){
+export default function LoginPage() {
 
   const dispatch = useAppDispatch();
   const isLoading = useAppSelector(selectAuthLoading);
@@ -27,19 +27,9 @@ export default function LoginPage(){
   const [password, setPassword] = useState("");
 
   //TODO: async
-  const handleSubmit = async (e:FormEvent)=>{
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
-    dispatch(loginStart());
-
-    //Api Call to login
-    dispatch(
-      loginUser({
-        email,
-        password,
-      })
-    );
-
+    dispatch(loginUser({ email, password }));
 
   }
 
@@ -53,15 +43,15 @@ export default function LoginPage(){
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
 
-      {/* Title: Sign in */}
-      <h1 className="mb-6 text-center text-2xl font-semibold text-gray-900">
-        Sign in
-      </h1>
+        {/* Title: Sign in */}
+        <h1 className="mb-6 text-center text-2xl font-semibold text-gray-900">
+          Sign in
+        </h1>
 
-      {/* Form: Email and Password */}
+        {/* Form: Email and Password */}
 
-      <form className="space-y-4" onSubmit={handleSubmit}>
-      <div>
+        <form className="space-y-4" onSubmit={handleSubmit}>
+          <div>
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
@@ -111,8 +101,8 @@ export default function LoginPage(){
             {isLoading ? "Signing in..." : "Sign in"}
           </button>
 
-      </form>
-      
+        </form>
+
 
 
       </div>

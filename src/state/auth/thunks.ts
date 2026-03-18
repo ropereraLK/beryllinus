@@ -9,6 +9,7 @@ export const loginUser = createAsyncThunk(
   ) => {
     try {
       return await login(email, password);
+
     } catch (error: any) {
       return rejectWithValue(error.response?.data || "Login failed");
     }
