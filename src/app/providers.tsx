@@ -1,7 +1,9 @@
 "use client";
 
-import ReduxProvider from "../providers/ReduxProvider";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
+
+import ReduxProvider from "../providers/ReduxProvider";
 
 const theme = createTheme({
   palette: {
@@ -14,10 +16,12 @@ const theme = createTheme({
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ReduxProvider>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
+      <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
+      </AppRouterCacheProvider>
     </ReduxProvider>
   );
 }

@@ -1,9 +1,9 @@
 Top-level structure (in src/)
 app/: Next.js routing, layouts, and pages.
 app/layout.tsx – root layout (theme providers, Redux provider, etc.).
-app/(public)/login/page.tsx – unauthenticated routes (login, signup).
-app/(app)/dashboard/page.tsx – authenticated app routes.
-app/(app)/settings/page.tsx – more feature areas.
+app/login/page.tsx – unauthenticated routes (login, signup).
+app/page/layout.tsx – app shell (drawer + header) for the /page/… segment (coexists with app/page.tsx for `/`).
+app/page/dashboard/page.tsx, app/page/user/page.tsx, app/page/settings/page.tsx – URLs under /page/....
 app/api/** – (if you use Next API routes).
 components/: Reusable UI building blocks.
 components/ui/ – low-level, design-system pieces (Button, Input, Modal).
