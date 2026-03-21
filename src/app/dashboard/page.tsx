@@ -28,16 +28,10 @@ import Typography from '@mui/material/Typography';
 const DashboardPage = () => {
   return (<div>
     <Header />
-    <Grid container spacing={2}>
-      <Grid size={12}>
-
-      </Grid>
-      <Grid size={4}>
-
-      </Grid>
-    </Grid>
-
+    {/* <SideBar/>
+    <MainContent/> */}
+     
   </div>);
 }
 
-export default DashboardPage;
+export default DashboardPage; 
