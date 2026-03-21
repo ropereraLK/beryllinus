@@ -1,33 +1,43 @@
 "use client";
 
 import AppLayout from "@/app/component/layout/AppLayout";
-import { Box, Card, CardContent, Typography } from "@mui/material";
+
+// material-ui
+import Avatar from '@mui/material/Avatar';
+import AvatarGroup from '@mui/material/AvatarGroup';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { Card } from "@mui/material";
+import { CardContent , AppBar,Toolbar} from "@mui/material";
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+
+// project imports
+ import Header from '@/app/component/global/header/page';
 
 
-const DashboardPage = ()=>{
-    return(<AppLayout>
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: { xs: "1fr", md: "repeat(4, 1fr)" },
-          gap: 2,
-        }}
-      >
+const DashboardPage = () => {
+  return (<div>
+    <Header />
+    <Grid container spacing={2}>
+      <Grid size={12}>
 
-        {[1, 2, 3, 4].map((item) => (
-          <Box key={item}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6">Bookings</Typography>
-                <Typography variant="h4">281</Typography>
-                <Typography color="green">+55%</Typography>
-              </CardContent>
-            </Card>
-          </Box>
-        ))}
+      </Grid>
+      <Grid size={4}>
 
-      </Box>
-    </AppLayout>);
+      </Grid>
+    </Grid>
+
+  </div>);
 }
 
 export default DashboardPage;

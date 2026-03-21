@@ -1,10 +1,5 @@
-import Image from "next/image";
-import Index from "./component/global";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <Index />
-    </div>
-  );
+  redirect("/dashboard");
 }
