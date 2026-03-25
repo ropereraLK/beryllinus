@@ -12,7 +12,7 @@ export default function UserPage() {
   }
 
   return (
-    <Stack spacing={3} maxWidth={480}>
+    <Stack spacing={2} maxWidth={480}>
       <Typography variant="h5" component="h1">
         User
       </Typography>
