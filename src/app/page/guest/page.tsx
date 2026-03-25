@@ -2,7 +2,7 @@
 
 import MenuItem from "@mui/material/MenuItem";
 import Stack from "@mui/material/Stack";
-import TextField from "@mui/material/TextField";
+import { TextField, Button } from "@mui/material";
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
@@ -141,8 +141,8 @@ export default function GuestRegistrationPage() {
                                 <MenuItem value="airbnb">Airbnb</MenuItem>
                                 <MenuItem value="bookingcom">Booking.com</MenuItem>
                                 <MenuItem value="phone">Phone</MenuItem>
-                               
-                                
+
+
 
                             </TextField>
                             <TextField
@@ -156,13 +156,13 @@ export default function GuestRegistrationPage() {
                             <TextField
                                 label="OTP"
                                 name="otp"
-   
+
                                 fullWidth
                                 required
                                 sx={{ flex: 1 }}
-                                
+
                             >
-                                
+
                             </TextField>
                         </Stack>
                         <Stack direction="row" spacing={2}>
@@ -212,12 +212,54 @@ export default function GuestRegistrationPage() {
                             </TextField>
                         </Stack>
                         <TextField
-                                label="email"
-                                name="Email"
+                            label="email"
+                            name="Email"
+                            fullWidth
+                            required
+                        >
+                        </TextField>
+                        <Stack direction="row" spacing={2}>
+                            <TextField
+                                label="Visa Type"
+                                name="visaType"
+                                select
                                 fullWidth
                                 required
+                                defaultValue="tourist"
                             >
+                                <MenuItem value="" disabled>
+                                    Select option
+                                </MenuItem>
+                                <MenuItem value="tourist">Tourist</MenuItem>
+                                <MenuItem value="business">Business</MenuItem>
+                                <MenuItem value="medical">Medical</MenuItem>
+                                <MenuItem value="other">Other</MenuItem>
                             </TextField>
+                            <DateField
+                                label="Visa Start Date"
+                                name="visaStartDate"
+                                required
+                            //  defaultValue={dayjs('2022-04-17')} 
+                            // sx={{ flex: 3 }
+                            />
+                            <DateField
+                                label="Visa End Date"
+                                name="visaEndDate"
+                                required
+                            //  defaultValue={dayjs('2022-04-17')} 
+                            // sx={{ flex: 3 }
+                            />
+
+
+                        </Stack>
+                        <Stack direction="row" spacing={2} sx={{ alignSelf: "flex-start" }}>
+                            <Button type="reset" variant="outlined">
+                                Clear
+                            </Button>
+                            <Button type="submit" variant="contained">
+                                Submit
+                            </Button>
+                        </Stack>
                     </Stack>
                 </Stack>
             </LocalizationProvider>
