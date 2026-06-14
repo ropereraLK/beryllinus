@@ -11,7 +11,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 
-import { LAYOUT_NAV_ITEMS } from "./layoutNav";
+import { APP_NAV_ITEMS } from "@/config/navigation";
 
 const WIDTH_PX = 240;
 
@@ -48,7 +48,7 @@ export default function AppSidebar() {
 
       <Box component="nav" sx={{ flex: 1, overflow: "auto" }}>
         <List disablePadding sx={{ px: 1, pb: 1 }}>
-          {LAYOUT_NAV_ITEMS.map(({ label, href }) => {
+          {APP_NAV_ITEMS.map(({ label, href }) => {
             const selected = pathname === href;
 
             return (

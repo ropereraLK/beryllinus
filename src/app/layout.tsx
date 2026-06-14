@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Berylinus",
   description: "Berylinus app",
   icons: {
-    icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+    icon: [{ url: "/favicon.png", sizes: "512x512", type: "image/png" }],
   },
 };
 

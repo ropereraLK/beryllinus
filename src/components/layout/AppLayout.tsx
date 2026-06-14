@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import Box from "@mui/material/Box";
 
-import Header from "@/app/component/global/header/page";
+import AppHeader from "./AppHeader";
 
 import AppSidebar from "./AppSidebar";
 
@@ -13,7 +13,9 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100vh",
+        height: "100dvh",
+        minWidth: 0,
+        overflow: "hidden",
       }}
     >
       {/* Full viewport width */}
@@ -24,7 +26,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           width: "100%",
         }}
       >
-        <Header />
+        <AppHeader />
       </Box>
 
       {/* Sidebar + main below header */}
@@ -42,9 +44,12 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           component="main"
           sx={{
             flex: 1,
+            display: "flex",
+            flexDirection: "column",
             minWidth: 0,
+            minHeight: 0,
             overflow: "auto",
-            p: 3,
+            p: { xs: 1.5, sm: 2, md: 3 },
           }}
         >
           {children}

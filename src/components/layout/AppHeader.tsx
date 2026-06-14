@@ -10,16 +10,16 @@ import {
 } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 
-import beryllinusLogo from "../../../../../assets/beryllinus-logo-1.png";
+import beryllinusLogo from "../../../assets/beryllinus-logo-1.png";
 
-export default function Header() {
+export default function AppHeader() {
   return (
     <AppBar position="static">
       <Toolbar sx={{ justifyContent: "space-between", gap: 2 }}>
         <Box sx={{ display: "flex", alignItems: "center", minWidth: 0, gap: 2 }}>
           <Avatar alt="Beryllinus" src={beryllinusLogo.src} />
           <Typography variant="h6" noWrap>
-            Berylinus Pte Ltd
+            Beryllinus Pte Ltd
           </Typography>
         </Box>
 

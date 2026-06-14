@@ -1,5 +1,5 @@
-import Typography from "@mui/material/Typography";
+import PageTitle from "@/app/component/ui/pageTitle";
 
 export default function SettingsPage() {
-  return <Typography variant="h5">Settings</Typography>;
+  return <PageTitle title="Settings" />;
 }

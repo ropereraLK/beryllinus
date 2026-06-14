@@ -1,18 +1,13 @@
 "use client";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useAppDispatch, useAppSelector } from "../../state/hooks";
-import {
-  loginStart,
-  loginSuccess,
-  loginFailure,
-} from "../../state/auth/slice";
+import { loginUser } from "@/features/auth/model/authThunks";
 import {
   selectAuthError,
   selectAuthLoading,
   selectIsAuthenticated,
-} from "../../state/auth/selectors";
-import { loginUser } from "@/state/auth/thunks";
+} from "@/features/auth/model/selectors";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 
 export default function LoginPage() {

@@ -1,4 +1,4 @@
-import { RootState } from "../store";
+import type { RootState } from "@/store/store";
 
 /** Base selector for the auth slice */
 export const selectAuthState = (state: RootState) => state.auth;

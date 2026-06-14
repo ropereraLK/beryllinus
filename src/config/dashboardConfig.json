@@ -1,0 +1,44 @@
+{
+  "calendar": {
+    "maxRowsPerCell": 3,
+
+    "availabilityIndicators": [
+      {
+        "label": "Fully Booked",
+        "icon": "🔴",
+        "minPercentage": 0,
+        "maxPercentage": 0
+      },
+      {
+        "label": "Low Availability",
+        "icon": "🟡",
+        "minPercentage": 0.01,
+        "maxPercentage": 20
+      },
+      {
+        "label": "Available",
+        "icon": "🟢",
+        "minPercentage": 20.01,
+        "maxPercentage": 100
+      }
+    ],
+
+    "roomTypes": [
+      {
+        "code": "LUXURY",
+        "label": "Luxury",
+        "shortLabel": "L"
+      },
+      {
+        "code": "STANDARD",
+        "label": "Standard",
+        "shortLabel": "S"
+      },
+      {
+        "code": "EXECUTIVE",
+        "label": "Executive",
+        "shortLabel": "E"
+      }
+    ]
+  }
+}
