@@ -11,7 +11,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 
-import { APP_NAV_ITEMS } from "@/config/navigation";
+import { APP_NAV_ITEMS } from "@/config1/navigation";
 
 const WIDTH_PX = 240;
 
