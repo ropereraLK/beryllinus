@@ -1,0 +1,135 @@
+{
+  "realm": "react-dev",
+  "enabled": true,
+  "displayName": "React Development",
+
+  "registrationAllowed": false,
+  "resetPasswordAllowed": true,
+  "rememberMe": true,
+
+  "roles": {
+    "realm": [
+      {
+        "name": "ADMIN",
+        "description": "Application administrator"
+      },
+      {
+        "name": "DEVELOPER",
+        "description": "Application developer"
+      }
+    ]
+  },
+
+  "clients": [
+    {
+      "clientId": "react-spa",
+      "name": "React SPA",
+      "description": "Local React application",
+      "enabled": true,
+
+      "protocol": "openid-connect",
+
+      "publicClient": true,
+      "clientAuthenticatorType": "none",
+
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": false,
+      "serviceAccountsEnabled": false,
+
+      "redirectUris": [
+        "http://localhost:3000/auth/callback"
+      ],
+
+      "webOrigins": [
+        "http://localhost:3000"
+      ],
+
+      "attributes": {
+        "pkce.code.challenge.method": "S256"
+      },
+
+      "protocolMappers": [
+        {
+          "name": "realm-roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-realm-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "roles",
+            "jsonType.label": "String"
+          }
+        }
+      ]
+    }
+  ],
+
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Admin",
+      "lastName": "User",
+      "email": "admin@local.dev",
+
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin",
+          "temporary": false
+        }
+      ],
+
+      "realmRoles": [
+        "ADMIN"
+      ]
+    },
+
+    {
+      "username": "user1",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Developer",
+      "lastName": "One",
+      "email": "user1@local.dev",
+
+      "credentials": [
+        {
+          "type": "password",
+          "value": "user1",
+          "temporary": false
+        }
+      ],
+
+      "realmRoles": [
+        "DEVELOPER"
+      ]
+    },
+
+    {
+      "username": "user2",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Developer",
+      "lastName": "Two",
+      "email": "user2@local.dev",
+
+      "credentials": [
+        {
+          "type": "password",
+          "value": "user2",
+          "temporary": false
+        }
+      ],
+
+      "realmRoles": [
+        "DEVELOPER"
+      ]
+    }
+  ]
+}
