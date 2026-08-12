@@ -1,8 +1,9 @@
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import SideNavigation from "./components/SideNavigation";
-import MyVar from "./components/Button";
-import DefaultPage from "./pages/DefaultPage";
+ 
+// import DefaultPage from "./pages/DefaultPage";
+import  AccountsPage  from "./features/account/pages/AccountsPage";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       <div className="grid grid-cols-[240px_1fr]">
         <SideNavigation />
         <div className="bg-[#f2f3f3]">
-          <DefaultPage/>
+          {/* <DefaultPage/> */}
+          <AccountsPage />
         </div>
       </div>
-      <MyVar></MyVar>
+       
     </div>
   );
 }

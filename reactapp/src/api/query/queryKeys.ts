@@ -25,7 +25,7 @@
 
  */
 
-            export const queryKeys = {
+export const queryKeys = {
   accounts: {
     all: ["accounts"] as const,
 

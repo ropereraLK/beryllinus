@@ -21,4 +21,7 @@ import { QueryClient } from "@tanstack/react-query";
  */
  const queryClient = new QueryClient();
 
+ // TODO: Expose temporarily for debugging in browser DevTools.
+ window.queryClient = queryClient;
+
  export default queryClient;
